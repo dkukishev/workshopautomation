@@ -3,13 +3,15 @@ package UtilitesCheck;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * Created by DenysKukishev on 12/5/18.
- */
+
 public class Patterns {
 
+    public static final String PATTERN_LETTERS = "[a-zA-Z]+";
+    public static final String PATTERN_DIGITS = "\\d+";
+
+    //Checking that line not a string
     public static boolean checkThatNotString(String inline) {
-        String patternAge = "[a-z]+";
+        String patternAge = PATTERN_LETTERS; //add to constant
         String number = inline;
         Pattern p1 = Pattern.compile(patternAge);
         Matcher m2 = p1.matcher(number);
@@ -21,8 +23,9 @@ public class Patterns {
         return false;
     }
 
+    //Checking that line not a digit
     public static boolean chechThatNotNumber(String inline) {
-        String pattern = "[0-9]+";
+        String pattern = PATTERN_DIGITS; //add to constant
         String text = inline;
         Pattern p = Pattern.compile(pattern);
         Matcher m = p.matcher(text);

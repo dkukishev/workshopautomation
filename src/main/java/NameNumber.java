@@ -19,6 +19,4 @@ public class NameNumber extends Patterns {
         System.out.print("I'm " + name + " and I'm " + age + " years old.");
     }
 
-
 }
-
